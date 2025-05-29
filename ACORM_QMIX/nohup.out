@@ -1,0 +1,134 @@
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/site-packages/huggingface_hub/file_download.py:1132: FutureWarning: `resume_download` is deprecated and will be removed in version 1.0.0. Downloads always resume when possible. If you want to force a new download, use `force_download=True`.
+  warnings.warn(
+Downloading shards:   0%|          | 0/3 [00:00<?, ?it/s]Downloading shards:  67%|██████▋   | 2/3 [00:00<00:00, 17.63it/s]Downloading shards: 100%|██████████| 3/3 [00:00<00:00, 17.85it/s]
+Loading checkpoint shards:   0%|          | 0/3 [00:00<?, ?it/s]Loading checkpoint shards:  33%|███▎      | 1/3 [00:00<00:00,  2.72it/s]Loading checkpoint shards:  67%|██████▋   | 2/3 [00:00<00:00,  2.77it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.90it/s]Loading checkpoint shards: 100%|██████████| 3/3 [00:01<00:00,  2.86it/s]
+Some weights of the model checkpoint at mistralai/Mistral-7B-Instruct-v0.2 were not used when initializing MistralEncoderModel: ['lm_head.weight']
+- This IS expected if you are initializing MistralEncoderModel from the checkpoint of a model trained on another task or with another architecture (e.g. initializing a BertForSequenceClassification model from a BertForPreTraining model).
+- This IS NOT expected if you are initializing MistralEncoderModel from the checkpoint of a model that you expect to be exactly identical (initializing a BertForSequenceClassification model from a BertForSequenceClassification model).
+Version: B75689 (SC2.4.10)
+Build: Aug 12 2019 17:16:57
+Command Line: '"/home/hg22723/StarCraftII/Versions/Base75689/SC2_x64" -listen 127.0.0.1 -port 35321 -dataDir /home/hg22723/StarCraftII/ -tempDir /tmp/sc-dhxfewqe/'
+Starting up...
+Startup Phase 1 complete
+Startup Phase 2 complete
+Creating stub renderer...
+Listening on: 127.0.0.1:35321
+Startup Phase 3 complete. Ready for commands.
+ConnectHandler: Request from 127.0.0.1:53976 accepted
+ReadyHandler: 127.0.0.1:53976 ready
+Requesting to join a single player game
+Configuring interface options
+Configure: raw interface enabled
+Configure: feature layer interface disabled
+Configure: score interface disabled
+Configure: render interface disabled
+Launching next game.
+Next launch phase started: 2
+Next launch phase started: 3
+Next launch phase started: 4
+Next launch phase started: 5
+Next launch phase started: 6
+Next launch phase started: 7
+Next launch phase started: 8
+Game has started.
+Using default stable ids, none found at: /home/hg22723/StarCraftII/stableid.json
+Successfully loaded stable ids: GameData\stableid.json
+Sending ResponseJoinGame
+number of agents=10
+obs_dim=176
+state_dim=322
+action_dim=18
+episode_limit=180
+------add last action------
+hyper_layers_num=2
+hyper_layers_num=2
+total_steps:0 	 win_rate:0.0 	 evaluate_reward:0.38372625453838166
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
+To disable this warning, you can either:
+	- Avoid using `tokenizers` before the fork if possible
+	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
+  0%|          | 0/4 [00:00<?, ?it/s]100%|██████████| 4/4 [00:00<00:00, 5122.81it/s]
+Traceback (most recent call last):
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_sharer.py", line 145, in _serve
+    send(conn, destination_pid)
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_sharer.py", line 50, in send
+    reduction.send_handle(conn, new_fd, pid)
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/reduction.py", line 183, in send_handle
+    with socket.fromfd(conn.fileno(), socket.AF_UNIX, socket.SOCK_STREAM) as s:
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/socket.py", line 544, in fromfd
+    nfd = dup(fd)
+OSError: [Errno 24] Too many open files
+Exception in thread Thread-4:
+Traceback (most recent call last):
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/threading.py", line 980, in _bootstrap_inner
+    self.run()
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/threading.py", line 917, in run
+    self._target(*self._args, **self._kwargs)
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/pool.py", line 513, in _handle_workers
+    cls._maintain_pool(ctx, Process, processes, pool, inqueue,
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/pool.py", line 337, in _maintain_pool
+    Pool._repopulate_pool_static(ctx, Process, processes, pool,
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/pool.py", line 326, in _repopulate_pool_static
+    w.start()
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/process.py", line 121, in start
+    self._popen = self._Popen(self)
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/context.py", line 284, in _Popen
+    return Popen(process_obj)
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/popen_spawn_posix.py", line 32, in __init__
+    super().__init__(process_obj)
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/popen_fork.py", line 19, in __init__
+    self._launch(process_obj)
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/popen_spawn_posix.py", line 54, in _launch
+    child_r, parent_w = os.pipe()
+OSError: [Errno 24] Too many open files
+free(): invalid pointer
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_tracker.py:216: UserWarning: resource_tracker: There appear to be 10 leaked semaphore objects to clean up at shutdown
+  warnings.warn('resource_tracker: There appear to be %d '
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_tracker.py:229: UserWarning: resource_tracker: '/loky-2963854-teo_k_xx': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_tracker.py:229: UserWarning: resource_tracker: '/loky-2963854-egldb3aq': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_tracker.py:229: UserWarning: resource_tracker: '/loky-2963854-knusy91s': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_tracker.py:229: UserWarning: resource_tracker: '/loky-2963854-9nwt72uy': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_tracker.py:229: UserWarning: resource_tracker: '/loky-2963854-k973xe_n': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_tracker.py:229: UserWarning: resource_tracker: '/loky-2963854-_y2e5m7p': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_tracker.py:229: UserWarning: resource_tracker: '/loky-2963854-v_mvb0zl': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_tracker.py:229: UserWarning: resource_tracker: '/loky-2963854-4ukv0en7': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_tracker.py:229: UserWarning: resource_tracker: '/loky-2963854-am27v4vt': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))
+/home/hg22723/anaconda3/envs/acorm/lib/python3.9/multiprocessing/resource_tracker.py:229: UserWarning: resource_tracker: '/loky-2963854-cqgsz9cw': [Errno 2] No such file or directory
+  warnings.warn('resource_tracker: %r: %s' % (name, e))

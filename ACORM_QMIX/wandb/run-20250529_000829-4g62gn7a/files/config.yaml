@@ -1,0 +1,273 @@
+_wandb:
+    value:
+        cli_version: 0.18.7
+        m: []
+        python_version: 3.9.16
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+                - 55
+            "2":
+                - 1
+                - 5
+                - 53
+                - 55
+            "3":
+                - 13
+                - 23
+                - 24
+                - 55
+                - 61
+            "4": 3.9.16
+            "5": 0.18.7
+            "8":
+                - 5
+            "12": 0.18.7
+            "13": linux-x86_64
+"N":
+    value: 8
+act:
+    value: SiLU
+action_dim:
+    value: 15
+add_last_action:
+    value: true
+agent_embedding_dim:
+    value: 128
+agent_embedding_lr:
+    value: 0.001
+agent_net:
+    value: Agent_Embedding
+algorithm:
+    value: R3DM
+att_dim:
+    value: 128
+att_out_dim:
+    value: 64
+base_model_name:
+    value: McGill-NLP/LLM2Vec-Mistral-7B-Instruct-v2-mntp
+base_model_peft:
+    value: McGill-NLP/LLM2Vec-Mistral-7B-Instruct-v2-mntp
+batch_length:
+    value: "64"
+batch_size:
+    value: "32"
+buffer_size:
+    value: 5000
+cluster_num:
+    value: 3
+compile:
+    value: "True"
+dataset_size:
+    value: "1000000"
+debug:
+    value: "False"
+decode_role:
+    value: "True"
+decoder:
+    value: '{''mlp_keys'': ''vector_obs'', ''cnn_keys'': '''', ''act'': ''SiLU'', ''norm'': True, ''cnn_depth'': 32, ''kernel_size'': 4, ''minres'': 4, ''mlp_layers'': 2, ''mlp_units'': 128, ''cnn_sigmoid'': False, ''image_dist'': ''mse'', ''vector_dist'': ''symlog_mse'', ''outscale'': 1.0, ''device'': ''cuda:0''}'
+deterministic_run:
+    value: "False"
+device:
+    value: cuda:0
+dyn_deter:
+    value: "128"
+dyn_discrete:
+    value: "16"
+dyn_hidden:
+    value: "128"
+dyn_mean_act:
+    value: none
+dyn_min_std:
+    value: "0.1"
+dyn_rec_depth:
+    value: "1"
+dyn_scale:
+    value: "0.5"
+dyn_std_act:
+    value: sigmoid2
+dyn_stoch:
+    value: "16"
+dyna_tau:
+    value: "0.005"
+encoder:
+    value: '{''mlp_keys'': ''vector_obs'', ''cnn_keys'': '''', ''act'': ''SiLU'', ''norm'': True, ''cnn_depth'': 32, ''kernel_size'': 4, ''minres'': 4, ''mlp_layers'': 2, ''mlp_units'': 128, ''symlog_inputs'': True, ''device'': ''cuda:0''}'
+env_name:
+    value: 3s5z_vs_3s6z
+episode_limit:
+    value: 170
+epsilon:
+    value: 1
+epsilon_decay:
+    value: 1.225e-05
+epsilon_decay_steps:
+    value: 80000
+epsilon_min:
+    value: 0.02
+eval_episode_num:
+    value: "10"
+eval_every:
+    value: "10000.0"
+evaldir:
+    value: None
+evaluate_freq:
+    value: 10000
+evaluate_times:
+    value: 32
+gamma:
+    value: 0.99
+grad_clip:
+    value: "1000"
+grad_heads:
+    value:
+        - decoder
+hf_access_token:
+    value: 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
+hyper_hidden_dim:
+    value: 64
+hyper_layers_num:
+    value: 2
+initial:
+    value: learned
+intr_beta1:
+    value: "1.0"
+intr_beta2:
+    value: "1.0"
+intr_beta3:
+    value: "0.0"
+intr_weight:
+    value: "0.1"
+intrinsic_anneal:
+    value: "False"
+intrinsic_anneal_start:
+    value: "1000000.0"
+intrinsic_anneal_steps:
+    value: "1000000.0"
+intrinsic_reward:
+    value: true
+iterations:
+    value: "1"
+kl_free:
+    value: "1.0"
+llm_batch_size:
+    value: 128
+llm_max_doc_length:
+    value: 512
+llm_max_length:
+    value: 512
+log_every:
+    value: "10000.0"
+logdir:
+    value: None
+lr:
+    value: 0.0006
+lr_decay_rate:
+    value: 0.98
+lr_decay_steps:
+    value: 500
+max_history:
+    value: 10
+max_train_steps:
+    value: 3000000
+mlp_hidden_dim:
+    value: 64
+model_lr:
+    value: "0.0001"
+model_path:
+    value: ./model/acormwm
+multi_steps:
+    value: 1
+n_heads:
+    value: 4
+norm:
+    value: "True"
+num_actions:
+    value: "15"
+num_process_per_gpu:
+    value: 1
+obs_dim:
+    value: 136
+obs_text_dim:
+    value: 4096
+offline_evaldir:
+    value: ""
+offline_traindir:
+    value: ""
+opt:
+    value: adam
+opt_eps:
+    value: "1e-08"
+parallel:
+    value: "False"
+precision:
+    value: "32"
+qmix_hidden_dim:
+    value: 32
+recl_lr:
+    value: 0.0008
+render:
+    value: true
+rep_scale:
+    value: "0.1"
+reset_every:
+    value: "0"
+reward_imagine_steps:
+    value: "1"
+rnn_hidden_dim:
+    value: 64
+role_embedding_dim:
+    value: 64
+role_mix_hidden_dim:
+    value: 64
+role_tau:
+    value: 0.005
+rssm_role:
+    value: "True"
+save_path:
+    value: ./result/acormwm
+seed:
+    value: "0"
+short_text:
+    value: false
+sns_plot:
+    value: false
+soft_temperature:
+    value: 1
+state_dim:
+    value: 230
+state_embed_dim:
+    value: 64
+steps:
+    value: "1000000.0"
+tag:
+    value: nocl
+target_update_freq:
+    value: 100
+tau:
+    value: 0.005
+tb_plot:
+    value: true
+train_ratio:
+    value: "512"
+train_recl_freq:
+    value: 0
+traindir:
+    value: None
+unimix_ratio:
+    value: "0.01"
+units:
+    value: "128"
+use_hard_update:
+    value: true
+use_ln:
+    value: true
+use_lr_decay:
+    value: true
+video_pred_log:
+    value: "True"
+wandb:
+    value: true
+weight_decay:
+    value: "0.0"

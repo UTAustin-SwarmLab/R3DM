@@ -1,0 +1,6 @@
+add_agent_id: True
+use_grad_clip: True
+use_rnn: True
+use_double_q: True
+use_RMS: True
+use_gpu: True

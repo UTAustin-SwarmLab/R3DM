@@ -1,0 +1,36 @@
+
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+ --algorithm 'R3DM' \
+ --env_name 'zerg_5_vs_5'\
+ --device 'cuda:0'\
+ --max_train_steps 3000000 \
+ --seed 5  \
+ --epsilon 1.0                 \
+ --epsilon_decay_steps 100000 \
+ --epsilon_min 0.00     \
+ --tau 0.005\
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate 0.98   \
+ --train_recl_freq 100 \
+ --use_ln False \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num 3   \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr +6e-4  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acormwm'\
+ --model_path './model/acormwm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1\
+ --intrinsic_reward True \
+                    

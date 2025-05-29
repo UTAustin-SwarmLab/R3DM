@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/home/hg22723/projects/R3DM/ACORM_QMIX/main.py", line 86, in <module>
+    runner = Runner(args)
+  File "/home/hg22723/projects/R3DM/ACORM_QMIX/run.py", line 96, in __init__
+    self.agent_n =  R3DM_Agent(self.args, self.dyn_config, self.env_info)
+  File "/home/hg22723/projects/R3DM/ACORM_QMIX/algorithm/r3dm.py", line 19, in __init__
+    super(ACORM_WM, self).__init__(args)
+NameError: name 'ACORM_WM' is not defined

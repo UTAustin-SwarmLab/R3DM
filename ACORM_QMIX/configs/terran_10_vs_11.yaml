@@ -1,0 +1,21 @@
+intrinsic:
+  dyna_tau: 0.005
+  intr_beta1: 0.2 # weights the role related terms
+  intr_beta2: 0.5 # weights the policy reward
+  intr_beta3: 0.0 # weights internal dreamer rssm pred reward (Set to 0)
+  intr_weight: 0.10 # Total intrinsic reward weight
+  # Set to True to use the intrinsic reward as a reward bonus
+  decode_role: True # Role embeddings in decoder for dreamer
+  rssm_role: True # Role embeddings in RSSM for dreamer
+  intrinsic_anneal: False
+  intrinsic_anneal_steps: 1e6
+  intrinsic_anneal_start: 1e6
+  reward_imagine_steps: 2
+backprop:
+  dyna_tau: 0.005
+  intr_beta1: 1.0 # weights the role related terms
+  intr_beta2: 1.0 # weights the policy loss
+  intr_beta3: 1.0 # weights the pred loss
+  decode_role: True # Role embeddings in decoder for dreamer
+  intr_weight: 0.0
+  rssm_role: True # Role embeddings in RSSM for dreamer

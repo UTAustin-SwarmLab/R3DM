@@ -1,0 +1,204 @@
+ENV='corridor'
+MAX_STEPS=2000000
+CLUSTER_NUM=8
+EPS_DECAY=80000
+lr=6e-4
+min_eps=0.02
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+ --algorithm 'QMIX' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 0 \
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}     \
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate 0.98    \
+ --train_recl_freq 100 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}  \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acorm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+&                   
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=1 python main.py \
+ --algorithm 'QMIX' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 1 \
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}     \
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate 0.98    \
+ --train_recl_freq 100 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}  \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acorm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+&                  
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=2 python main.py \
+ --algorithm 'QMIX' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 2 \
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}    \
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate 0.98    \
+ --train_recl_freq 100 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}   \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acorm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+&                 
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=3 python main.py \
+ --algorithm 'QMIX' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 3\
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}     \
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate 0.98    \
+ --train_recl_freq 100 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}   \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acorm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+&                  
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=4 python main.py \
+ --algorithm 'QMIX' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 4 \
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}     \
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate 0.98    \
+ --train_recl_freq 100 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}   \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acorm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+&                 
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=5 python main.py \
+ --algorithm 'QMIX' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 5 \
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}      \
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate 0.98    \
+ --train_recl_freq 100 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}   \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acorm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+                    

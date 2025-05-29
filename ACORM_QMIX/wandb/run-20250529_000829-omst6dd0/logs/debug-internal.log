@@ -1,0 +1,8 @@
+{"time":"2025-05-29T00:08:29.781032977-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-05-29T00:08:29.781080676-05:00","level":"INFO","msg":"created symlink","path":"/home/hg22723/projects/R3DM/ACORM_QMIX/wandb/run-20250529_000829-omst6dd0/logs/debug-core.log"}
+{"time":"2025-05-29T00:08:29.894244628-05:00","level":"INFO","msg":"created new stream","id":"omst6dd0"}
+{"time":"2025-05-29T00:08:29.894297578-05:00","level":"INFO","msg":"stream: started","id":"omst6dd0"}
+{"time":"2025-05-29T00:08:29.894349867-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"omst6dd0"}
+{"time":"2025-05-29T00:08:29.894360437-05:00","level":"INFO","msg":"sender: started","stream_id":"omst6dd0"}
+{"time":"2025-05-29T00:08:29.894468304-05:00","level":"INFO","msg":"handler: started","stream_id":"omst6dd0"}
+{"time":"2025-05-29T00:08:30.083033694-05:00","level":"INFO","msg":"Starting system monitor"}

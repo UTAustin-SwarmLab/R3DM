@@ -1,0 +1,16 @@
+{"time":"2025-05-29T00:08:01.166055346-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-05-29T00:08:01.166089405-05:00","level":"INFO","msg":"created symlink","path":"/home/hg22723/projects/R3DM/ACORM_QMIX/wandb/run-20250529_000801-iifqre9g/logs/debug-core.log"}
+{"time":"2025-05-29T00:08:01.378190165-05:00","level":"INFO","msg":"created new stream","id":"iifqre9g"}
+{"time":"2025-05-29T00:08:01.378266513-05:00","level":"INFO","msg":"stream: started","id":"iifqre9g"}
+{"time":"2025-05-29T00:08:01.378306643-05:00","level":"INFO","msg":"sender: started","stream_id":"iifqre9g"}
+{"time":"2025-05-29T00:08:01.378305993-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"iifqre9g"}
+{"time":"2025-05-29T00:08:01.378595698-05:00","level":"INFO","msg":"handler: started","stream_id":"iifqre9g"}
+{"time":"2025-05-29T00:08:01.783970342-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-29T00:08:01.980672806-05:00","level":"INFO","msg":"stream: closing","id":"iifqre9g"}
+{"time":"2025-05-29T00:08:01.980727735-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-29T00:08:01.981430473-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-29T00:08:03.748355839-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-29T00:08:03.853150472-05:00","level":"INFO","msg":"handler: closed","stream_id":"iifqre9g"}
+{"time":"2025-05-29T00:08:03.85321452-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"iifqre9g"}
+{"time":"2025-05-29T00:08:03.8532358-05:00","level":"INFO","msg":"sender: closed","stream_id":"iifqre9g"}
+{"time":"2025-05-29T00:08:03.853377217-05:00","level":"INFO","msg":"stream: closed","id":"iifqre9g"}

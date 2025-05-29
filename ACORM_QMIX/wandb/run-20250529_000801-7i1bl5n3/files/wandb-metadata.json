@@ -1,0 +1,155 @@
+{
+  "os": "Linux-6.8.0-58-generic-x86_64-with-glibc2.35",
+  "python": "3.9.16",
+  "startedAt": "2025-05-29T05:08:01.214961Z",
+  "args": [
+    "--algorithm",
+    "R3DM",
+    "--env_name",
+    "3s5z_vs_3s6z",
+    "--device",
+    "cuda:0",
+    "--max_train_steps",
+    "3000000",
+    "--seed",
+    "3",
+    "--epsilon",
+    "1.0",
+    "--epsilon_decay_steps",
+    "80000",
+    "--epsilon_min",
+    "0.02",
+    "--use_hard_update",
+    "False",
+    "--use_lr_decay",
+    "True",
+    "--lr_decay_steps",
+    "500",
+    "--lr_decay_rate",
+    "0.98",
+    "--train_recl_freq",
+    "00",
+    "--use_ln",
+    "True",
+    "--role_tau",
+    "0.005",
+    "--tau",
+    "0.005",
+    "--cluster_num",
+    "3",
+    "--agent_embedding_dim",
+    "128",
+    "--hyper_layers_num",
+    "2",
+    "--lr",
+    "6e-4",
+    "--recl_lr",
+    "+8e-4",
+    "--role_embedding_dim",
+    "64",
+    "--save_path",
+    "./result/acormwm",
+    "--model_path",
+    "./model/acormwm",
+    "--att_dim",
+    "128",
+    "--att_out_dim",
+    "64",
+    "--n_heads",
+    "4",
+    "--soft_temperature",
+    "1.0",
+    "--state_embed_dim",
+    "64",
+    "--max_history",
+    "10",
+    "--num_process_per_gpu",
+    "1",
+    "--intrinsic_reward",
+    "True",
+    "--batch_size",
+    "32",
+    "--tag",
+    "nocl"
+  ],
+  "program": "/home/hg22723/projects/R3DM/ACORM_QMIX/main.py",
+  "codePath": "ACORM_QMIX/main.py",
+  "git": {
+    "remote": "https://github.com/UTAustin-SwarmLab/R3DM.git",
+    "commit": "d4a678002052d275688dad4e610f2dc5d7e2211b"
+  },
+  "email": "harshg99@utexas.edu",
+  "root": "/home/hg22723/projects/R3DM/ACORM_QMIX",
+  "host": "ece-a52150",
+  "username": "hg22723@austin.utexas.edu",
+  "executable": "/home/hg22723/anaconda3/envs/acorm/bin/python",
+  "codePathLocal": "main.py",
+  "cpu_count": 48,
+  "cpu_count_logical": 96,
+  "gpu": "NVIDIA A100 80GB PCIe",
+  "gpu_count": 8,
+  "disk": {
+    "/": {
+      "total": "15237485797376",
+      "used": "10356990283776"
+    }
+  },
+  "memory": {
+    "total": "1014382440448"
+  },
+  "cpu": {
+    "count": 48,
+    "countLogical": 96
+  },
+  "gpu_nvidia": [
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    },
+    {
+      "name": "NVIDIA A100 80GB PCIe",
+      "memoryTotal": "85899345920",
+      "cudaCores": 6912,
+      "architecture": "Ampere"
+    }
+  ],
+  "cudaVersion": "12.4"
+}

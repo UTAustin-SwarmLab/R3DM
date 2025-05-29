@@ -1,0 +1,120 @@
+------add last action------
+hyper_layers_num=2
+hyper_layers_num=2
+Encoder CNN shapes: {}
+Encoder MLP shapes: {'vector_obs': [136]}
+Decoder CNN shapes: {}
+Decoder MLP shapes: {'vector_obs': [136]}
+Optimizer model_opt has 384136 variables.
+Encoder CNN shapes: {}
+Encoder MLP shapes: {'vector_obs': [136]}
+Decoder CNN shapes: {}
+Decoder MLP shapes: {'vector_obs': [136]}
+Optimizer model_opt has 367752 variables.
+Encoder CNN shapes: {}
+Encoder MLP shapes: {'vector_obs': [136]}
+Decoder CNN shapes: {}
+Decoder MLP shapes: {'vector_obs': [136]}
+Optimizer model_opt has 384136 variables.
+Encoder CNN shapes: {}
+Encoder MLP shapes: {'vector_obs': [136]}
+Decoder CNN shapes: {}
+Decoder MLP shapes: {'vector_obs': [136]}
+Optimizer model_opt has 367752 variables.
+pygame 2.3.0 (SDL 2.24.2, Python 3.9.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+total_steps:0 	 win_rate:0.0 	 evaluate_reward:0.8501590568862276
+total_steps:0 	 episode_steps:50
+total_steps:0 	 episode_steps:53
+total_steps:0 	 episode_steps:56
+total_steps:0 	 episode_steps:40
+total_steps:0 	 episode_steps:48
+total_steps:0 	 episode_steps:52
+total_steps:0 	 episode_steps:50
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:76
+total_steps:0 	 episode_steps:42
+total_steps:0 	 episode_steps:41
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:57
+total_steps:0 	 episode_steps:48
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:43
+total_steps:0 	 episode_steps:68
+total_steps:0 	 episode_steps:52
+total_steps:0 	 episode_steps:52
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:51
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:47
+total_steps:0 	 episode_steps:47
+total_steps:0 	 episode_steps:57
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:40
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:43
+total_steps:0 	 episode_steps:50
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:67
+total_steps:0 	 episode_steps:54
+total_steps:0 	 episode_steps:62
+total_steps:0 	 episode_steps:47
+total_steps:0 	 episode_steps:55
+total_steps:0 	 episode_steps:48
+total_steps:0 	 episode_steps:48
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:43
+total_steps:0 	 episode_steps:51
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:48
+total_steps:0 	 episode_steps:50
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:41
+total_steps:0 	 episode_steps:48
+total_steps:0 	 episode_steps:47
+total_steps:0 	 episode_steps:51
+total_steps:0 	 episode_steps:42
+total_steps:0 	 episode_steps:47
+total_steps:0 	 episode_steps:43
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:42
+total_steps:0 	 episode_steps:54
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:47
+total_steps:0 	 episode_steps:43
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:47
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:48
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:41
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:68
+total_steps:0 	 episode_steps:68
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:50
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:90
+total_steps:0 	 episode_steps:42
+total_steps:0 	 episode_steps:43
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:78

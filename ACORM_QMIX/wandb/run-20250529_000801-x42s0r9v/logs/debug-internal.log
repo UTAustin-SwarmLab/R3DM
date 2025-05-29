@@ -1,0 +1,16 @@
+{"time":"2025-05-29T00:08:01.282787115-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-05-29T00:08:01.282835394-05:00","level":"INFO","msg":"created symlink","path":"/home/hg22723/projects/R3DM/ACORM_QMIX/wandb/run-20250529_000801-x42s0r9v/logs/debug-core.log"}
+{"time":"2025-05-29T00:08:01.395395718-05:00","level":"INFO","msg":"created new stream","id":"x42s0r9v"}
+{"time":"2025-05-29T00:08:01.395431647-05:00","level":"INFO","msg":"stream: started","id":"x42s0r9v"}
+{"time":"2025-05-29T00:08:01.395469997-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"x42s0r9v"}
+{"time":"2025-05-29T00:08:01.395470577-05:00","level":"INFO","msg":"handler: started","stream_id":"x42s0r9v"}
+{"time":"2025-05-29T00:08:01.395529336-05:00","level":"INFO","msg":"sender: started","stream_id":"x42s0r9v"}
+{"time":"2025-05-29T00:08:01.923831529-05:00","level":"INFO","msg":"Starting system monitor"}
+{"time":"2025-05-29T00:08:02.097534613-05:00","level":"INFO","msg":"stream: closing","id":"x42s0r9v"}
+{"time":"2025-05-29T00:08:02.097578203-05:00","level":"INFO","msg":"Stopping system monitor"}
+{"time":"2025-05-29T00:08:02.098579075-05:00","level":"INFO","msg":"Stopped system monitor"}
+{"time":"2025-05-29T00:08:03.951240353-05:00","level":"INFO","msg":"fileTransfer: Close: file transfer manager closed"}
+{"time":"2025-05-29T00:08:04.030384713-05:00","level":"INFO","msg":"handler: closed","stream_id":"x42s0r9v"}
+{"time":"2025-05-29T00:08:04.030440961-05:00","level":"INFO","msg":"sender: closed","stream_id":"x42s0r9v"}
+{"time":"2025-05-29T00:08:04.030424202-05:00","level":"INFO","msg":"writer: Close: closed","stream_id":"x42s0r9v"}
+{"time":"2025-05-29T00:08:04.030586589-05:00","level":"INFO","msg":"stream: closed","id":"x42s0r9v"}

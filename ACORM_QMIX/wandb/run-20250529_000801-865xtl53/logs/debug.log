@@ -1,0 +1,27 @@
+2025-05-29 00:08:01,157 INFO    MainThread:1396990 [wandb_setup.py:_flush():79] Current SDK version is 0.18.7
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_setup.py:_flush():79] Configure stats pid to 1396990
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_setup.py:_flush():79] Loading settings from /home/hg22723/.config/wandb/settings
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_setup.py:_flush():79] Loading settings from /home/hg22723/projects/R3DM/ACORM_QMIX/wandb/settings
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_setup.py:_flush():79] Loading settings from environment variables: {}
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_setup.py:_flush():79] Applying setup settings: {'mode': None, '_disable_service': None}
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_setup.py:_flush():79] Inferring run settings from compute environment: {'program_relpath': 'ACORM_QMIX/main.py', 'program_abspath': '/home/hg22723/projects/R3DM/ACORM_QMIX/main.py', 'program': '/home/hg22723/projects/R3DM/ACORM_QMIX/main.py'}
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_setup.py:_flush():79] Applying login settings: {}
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_init.py:_log_setup():533] Logging user logs to /home/hg22723/projects/R3DM/ACORM_QMIX/wandb/run-20250529_000801-865xtl53/logs/debug.log
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_init.py:_log_setup():534] Logging internal logs to /home/hg22723/projects/R3DM/ACORM_QMIX/wandb/run-20250529_000801-865xtl53/logs/debug-internal.log
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_init.py:init():619] calling init triggers
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_init.py:init():626] wandb.init called with sweep_config: {}
+config: {}
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_init.py:init():669] starting backend
+2025-05-29 00:08:01,158 INFO    MainThread:1396990 [wandb_init.py:init():673] sending inform_init request
+2025-05-29 00:08:01,160 INFO    MainThread:1396990 [backend.py:_multiprocessing_setup():104] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2025-05-29 00:08:01,160 INFO    MainThread:1396990 [wandb_init.py:init():686] backend started and connected
+2025-05-29 00:08:01,166 INFO    MainThread:1396990 [wandb_init.py:init():781] updated telemetry
+2025-05-29 00:08:01,192 INFO    MainThread:1396990 [wandb_init.py:init():814] communicating run to backend with 90.0 second timeout
+2025-05-29 00:08:01,539 INFO    MainThread:1396990 [wandb_init.py:init():867] starting run threads in backend
+2025-05-29 00:08:01,681 INFO    MainThread:1396990 [wandb_run.py:_console_start():2456] atexit reg
+2025-05-29 00:08:01,682 INFO    MainThread:1396990 [wandb_run.py:_redirect():2305] redirect: wrap_raw
+2025-05-29 00:08:01,682 INFO    MainThread:1396990 [wandb_run.py:_redirect():2370] Wrapping output streams.
+2025-05-29 00:08:01,682 INFO    MainThread:1396990 [wandb_run.py:_redirect():2395] Redirects installed.
+2025-05-29 00:08:01,684 INFO    MainThread:1396990 [wandb_init.py:init():911] run started, returning control to user process
+2025-05-29 00:08:01,685 INFO    MainThread:1396990 [wandb_run.py:_config_callback():1387] config_cb None None {'max_train_steps': 3000000, 'evaluate_freq': 10000, 'evaluate_times': 32, 'algorithm': 'R3DM', 'agent_net': 'Agent_Embedding', 'epsilon': 1.0, 'epsilon_decay_steps': 80000.0, 'epsilon_min': 0.02, 'buffer_size': 5000, 'batch_size': 32, 'lr': 0.0006, 'gamma': 0.99, 'qmix_hidden_dim': 32, 'hyper_hidden_dim': 64, 'hyper_layers_num': 2, 'rnn_hidden_dim': 64, 'mlp_hidden_dim': 64, 'add_last_action': True, 'use_hard_update': True, 'use_lr_decay': True, 'lr_decay_steps': 500, 'lr_decay_rate': 0.98, 'target_update_freq': 100, 'tau': 0.005, 'seed': 5, 'device': 'cuda:0', 'tag': 'nocl', 'env_name': '3s5z_vs_3s6z', 'sns_plot': False, 'tb_plot': True, 'wandb': True, 'intrinsic_reward': True, 'agent_embedding_dim': 128, 'role_embedding_dim': 64, 'use_ln': True, 'cluster_num': 3, 'recl_lr': 0.0008, 'agent_embedding_lr': 0.001, 'train_recl_freq': 0, 'role_tau': 0.005, 'multi_steps': 1, 'role_mix_hidden_dim': 64, 'att_dim': 128, 'att_out_dim': 64, 'n_heads': 4, 'soft_temperature': 1.0, 'state_embed_dim': 64, 'save_path': './result/acormwm', 'model_path': './model/acormwm', 'base_model_name': 'McGill-NLP/LLM2Vec-Mistral-7B-Instruct-v2-mntp', 'base_model_peft': 'McGill-NLP/LLM2Vec-Mistral-7B-Instruct-v2-mntp', 'hf_access_token': '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', 'max_history': 10, 'num_process_per_gpu': 1, 'llm_batch_size': 128, 'llm_max_length': 512, 'llm_max_doc_length': 512, 'render': True, 'short_text': False, 'epsilon_decay': 1.225e-05, 'N': 8, 'obs_dim': 136, 'state_dim': 230, 'action_dim': 15, 'episode_limit': 170, 'obs_text_dim': 4096}
+2025-05-29 00:08:01,722 WARNING MsgRouterThr:1396990 [router.py:message_loop():75] message_loop has been closed

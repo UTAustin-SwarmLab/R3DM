@@ -1,0 +1,225 @@
+ENV='3s5z_vs_3s6z'
+MAX_STEPS=3000000
+CLUSTER_NUM=3
+batch_size=32
+EPS_DECAY=80000
+lr_decay=0.98
+min_eps=0.02
+lr=6e-4
+tag='nocl'
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+ --algorithm 'R3DM' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 0 \
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}     \
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate ${lr_decay}    \
+ --train_recl_freq 00 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}  \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acormwm'\
+ --model_path './model/acormwm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+ --batch_size ${batch_size} \
+ --tag ${tag} \
+&                   
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+ --algorithm 'R3DM' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 1 \
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}     \
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate ${lr_decay}    \
+ --train_recl_freq 00 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}  \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acormwm'\
+ --model_path './model/acormwm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+ --batch_size ${batch_size} \
+ --tag ${tag} \
+&                  
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+ --algorithm 'R3DM' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 2 \
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}     \
+ --use_hard_update False \
+ --use_lr_decay ${lr_decay}     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate 0.98    \
+ --train_recl_freq 00 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}   \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acormwm'\
+ --model_path './model/acormwm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+ --batch_size ${batch_size} \
+ --tag ${tag} \
+&                 
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+ --algorithm 'R3DM' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 3\
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}      \
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate ${lr_decay}    \
+ --train_recl_freq 00 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}   \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acormwm'\
+ --model_path './model/acormwm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+ --batch_size ${batch_size} \
+ --tag ${tag} \
+& 
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+ --algorithm 'R3DM' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 4 \
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}      \
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate ${lr_decay}    \
+ --train_recl_freq 00 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}   \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acormwm'\
+ --model_path './model/acormwm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+ --batch_size ${batch_size} \
+ --tag ${tag} \
+&                 
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+ --algorithm 'R3DM' \
+ --env_name ${ENV}\
+ --device 'cuda:0'\
+ --max_train_steps ${MAX_STEPS}\
+ --seed 5 \
+ --epsilon 1.0                 \
+ --epsilon_decay_steps ${EPS_DECAY} \
+ --epsilon_min ${min_eps}     \
+ --use_hard_update False \
+ --use_lr_decay True     \
+ --lr_decay_steps 500    \
+ --lr_decay_rate ${lr_decay}    \
+ --train_recl_freq 00 \
+ --use_ln True \
+ --role_tau 0.005  \
+ --tau 0.005\
+ --cluster_num ${CLUSTER_NUM}   \
+ --agent_embedding_dim 128 \
+ --hyper_layers_num 2      \
+ --lr ${lr}  \
+ --recl_lr +8e-4   \
+ --role_embedding_dim 64   \
+ --save_path './result/acormwm'\
+ --model_path './model/acormwm'\
+ --att_dim 128  \
+ --att_out_dim 64  \
+ --n_heads 4   \
+ --soft_temperature 1.0  \
+ --state_embed_dim 64   \
+ --max_history 10 \
+ --num_process_per_gpu 1 \
+ --intrinsic_reward True \
+ --batch_size ${batch_size} \
+ --tag ${tag} \
+                    

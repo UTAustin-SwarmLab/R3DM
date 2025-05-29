@@ -1,0 +1,63 @@
+# Dynamics Model Dreamer params
+dyn_hidden: 128 #512, 256
+dyn_deter: 128 #512, 256
+dyn_stoch: 16  # 32, 24
+dyn_discrete: 16 # 32, 24
+dyn_rec_depth: 1
+dyn_mean_act: 'none'
+dyn_std_act: 'sigmoid2'
+dyn_min_std: 0.1
+grad_heads: ['decoder']
+units: 128  #512,256
+act: 'SiLU'
+norm: True
+
+encoder:
+  {mlp_keys: 'vector_obs', cnn_keys: '', act: 'SiLU', 
+  norm: True, cnn_depth: 32, kernel_size: 4, minres: 4,
+   mlp_layers: 2, mlp_units: 128, symlog_inputs: True} # 1024 units , 5 mlp layers default, 3 512 2,256
+decoder:
+  {mlp_keys: 'vector_obs', cnn_keys: '', 
+  act: 'SiLU', norm: True, cnn_depth: 32, 
+  kernel_size: 4, minres: 4, mlp_layers: 2, mlp_units: 128, 
+  cnn_sigmoid: False, image_dist: mse, vector_dist: symlog_mse, outscale: 1.0}
+dyn_scale: 0.5
+rep_scale: 0.1
+kl_free: 1.0
+weight_decay: 0.0
+unimix_ratio: 0.01
+initial: 'learned'
+
+
+logdir: null
+traindir: null
+evaldir: null
+offline_traindir: ''
+offline_evaldir: ''
+seed: 0
+deterministic_run: False
+steps: 1e6
+parallel: False
+eval_every: 1e4
+eval_episode_num: 10
+log_every: 1e4
+reset_every: 0
+compile: True
+precision: 32
+debug: False
+video_pred_log: True
+
+
+# Training
+batch_size: 32
+iterations: 1 # Number of iterations to train the model per episode of collected data
+batch_length: 64
+train_ratio: 512
+model_lr: 1e-4
+opt_eps: 1e-8
+grad_clip: 1000
+dataset_size: 1000000
+opt: 'adam'
+
+
+# Intrinsic reward params or loss coefficients for different environments

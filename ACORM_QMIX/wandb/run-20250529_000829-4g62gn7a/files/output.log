@@ -1,0 +1,74 @@
+------add last action------
+hyper_layers_num=2
+hyper_layers_num=2
+Encoder CNN shapes: {}
+Encoder MLP shapes: {'vector_obs': [136]}
+Decoder CNN shapes: {}
+Decoder MLP shapes: {'vector_obs': [136]}
+Optimizer model_opt has 384136 variables.
+Encoder CNN shapes: {}
+Encoder MLP shapes: {'vector_obs': [136]}
+Decoder CNN shapes: {}
+Decoder MLP shapes: {'vector_obs': [136]}
+Optimizer model_opt has 367752 variables.
+Encoder CNN shapes: {}
+Encoder MLP shapes: {'vector_obs': [136]}
+Decoder CNN shapes: {}
+Decoder MLP shapes: {'vector_obs': [136]}
+Optimizer model_opt has 384136 variables.
+Encoder CNN shapes: {}
+Encoder MLP shapes: {'vector_obs': [136]}
+Decoder CNN shapes: {}
+Decoder MLP shapes: {'vector_obs': [136]}
+Optimizer model_opt has 367752 variables.
+pygame 2.3.0 (SDL 2.24.2, Python 3.9.16)
+Hello from the pygame community. https://www.pygame.org/contribute.html
+total_steps:0 	 win_rate:0.0 	 evaluate_reward:2.881268712574848
+total_steps:0 	 episode_steps:47
+total_steps:0 	 episode_steps:65
+total_steps:0 	 episode_steps:52
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:47
+total_steps:0 	 episode_steps:54
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:52
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:48
+total_steps:0 	 episode_steps:44
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:53
+total_steps:0 	 episode_steps:51
+total_steps:0 	 episode_steps:41
+total_steps:0 	 episode_steps:58
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:46
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:45
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:41
+total_steps:0 	 episode_steps:49
+total_steps:0 	 episode_steps:46
+Traceback (most recent call last):
+  File "/home/hg22723/projects/R3DM/ACORM_QMIX/main.py", line 87, in <module>
+    runner.run()
+  File "/home/hg22723/projects/R3DM/ACORM_QMIX/run.py", line 124, in run
+    _, _, episode_steps = self.run_episode_smac(evaluate=False)  # Run an episode
+  File "/home/hg22723/projects/R3DM/ACORM_QMIX/run.py", line 251, in run_episode_smac
+    role_embedding = self.agent_n.get_role_embedding(obs_n, last_onehot_a_n)
+  File "/home/hg22723/projects/R3DM/ACORM_QMIX/algorithm/r3dm.py", line 47, in get_role_embedding
+    role_embedding = self.RECL(recl_obs, recl_last_a, detach=True)
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/hg22723/projects/R3DM/ACORM_QMIX/algorithm/acorm.py", line 112, in forward
+    agent_embedding = self.agent_embedding_net(obs, action, detach)
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/hg22723/projects/R3DM/ACORM_QMIX/util/net.py", line 53, in forward
+    self.rnn_hidden = self.agent_embedding_fc(fc1_out, self.rnn_hidden)
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/site-packages/torch/nn/modules/module.py", line 1194, in _call_impl
+    return forward_call(*input, **kwargs)
+  File "/home/hg22723/anaconda3/envs/acorm/lib/python3.9/site-packages/torch/nn/modules/rnn.py", line 1284, in forward
+    ret = _VF.gru_cell(
+KeyboardInterrupt

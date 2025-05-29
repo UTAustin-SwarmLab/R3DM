@@ -1,0 +1,8 @@
+{"time":"2025-05-29T00:08:29.671486219-05:00","level":"INFO","msg":"using version","core version":"0.18.7"}
+{"time":"2025-05-29T00:08:29.671531258-05:00","level":"INFO","msg":"created symlink","path":"/home/hg22723/projects/R3DM/ACORM_QMIX/wandb/run-20250529_000829-3jmaciv4/logs/debug-core.log"}
+{"time":"2025-05-29T00:08:29.783578131-05:00","level":"INFO","msg":"created new stream","id":"3jmaciv4"}
+{"time":"2025-05-29T00:08:29.783613111-05:00","level":"INFO","msg":"stream: started","id":"3jmaciv4"}
+{"time":"2025-05-29T00:08:29.78365263-05:00","level":"INFO","msg":"handler: started","stream_id":"3jmaciv4"}
+{"time":"2025-05-29T00:08:29.78365801-05:00","level":"INFO","msg":"writer: Do: started","stream_id":"3jmaciv4"}
+{"time":"2025-05-29T00:08:29.783672019-05:00","level":"INFO","msg":"sender: started","stream_id":"3jmaciv4"}
+{"time":"2025-05-29T00:08:29.969636345-05:00","level":"INFO","msg":"Starting system monitor"}

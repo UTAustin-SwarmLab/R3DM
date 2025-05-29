@@ -1,0 +1,158 @@
+_wandb:
+    value:
+        cli_version: 0.18.7
+        m: []
+        python_version: 3.9.16
+        t:
+            "1":
+                - 1
+                - 5
+                - 53
+                - 55
+            "2":
+                - 1
+                - 5
+                - 53
+                - 55
+            "3":
+                - 13
+                - 23
+                - 55
+            "4": 3.9.16
+            "5": 0.18.7
+            "8":
+                - 5
+            "12": 0.18.7
+            "13": linux-x86_64
+"N":
+    value: 8
+action_dim:
+    value: 15
+add_last_action:
+    value: true
+agent_embedding_dim:
+    value: 128
+agent_embedding_lr:
+    value: 0.001
+agent_net:
+    value: Agent_Embedding
+algorithm:
+    value: R3DM
+att_dim:
+    value: 128
+att_out_dim:
+    value: 64
+base_model_name:
+    value: McGill-NLP/LLM2Vec-Mistral-7B-Instruct-v2-mntp
+base_model_peft:
+    value: McGill-NLP/LLM2Vec-Mistral-7B-Instruct-v2-mntp
+batch_size:
+    value: 32
+buffer_size:
+    value: 5000
+cluster_num:
+    value: 3
+device:
+    value: cuda:0
+env_name:
+    value: 3s5z_vs_3s6z
+episode_limit:
+    value: 170
+epsilon:
+    value: 1
+epsilon_decay:
+    value: 1.225e-05
+epsilon_decay_steps:
+    value: 80000
+epsilon_min:
+    value: 0.02
+evaluate_freq:
+    value: 10000
+evaluate_times:
+    value: 32
+gamma:
+    value: 0.99
+hf_access_token:
+    value: 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
+hyper_hidden_dim:
+    value: 64
+hyper_layers_num:
+    value: 2
+intrinsic_reward:
+    value: true
+llm_batch_size:
+    value: 128
+llm_max_doc_length:
+    value: 512
+llm_max_length:
+    value: 512
+lr:
+    value: 0.0006
+lr_decay_rate:
+    value: 0.98
+lr_decay_steps:
+    value: 500
+max_history:
+    value: 10
+max_train_steps:
+    value: 3000000
+mlp_hidden_dim:
+    value: 64
+model_path:
+    value: ./model/acormwm
+multi_steps:
+    value: 1
+n_heads:
+    value: 4
+num_process_per_gpu:
+    value: 1
+obs_dim:
+    value: 136
+obs_text_dim:
+    value: 4096
+qmix_hidden_dim:
+    value: 32
+recl_lr:
+    value: 0.0008
+render:
+    value: true
+rnn_hidden_dim:
+    value: 64
+role_embedding_dim:
+    value: 64
+role_mix_hidden_dim:
+    value: 64
+role_tau:
+    value: 0.005
+save_path:
+    value: ./result/acormwm
+seed:
+    value: 5
+short_text:
+    value: false
+sns_plot:
+    value: false
+soft_temperature:
+    value: 1
+state_dim:
+    value: 230
+state_embed_dim:
+    value: 64
+tag:
+    value: nocl
+target_update_freq:
+    value: 100
+tau:
+    value: 0.005
+tb_plot:
+    value: true
+train_recl_freq:
+    value: 0
+use_hard_update:
+    value: true
+use_ln:
+    value: true
+use_lr_decay:
+    value: true
+wandb:
+    value: true
