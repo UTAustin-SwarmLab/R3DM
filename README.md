@@ -1,7 +1,7 @@
 
 ## **Instructions**
 
-Code based based on the ACORM paper.
+Code based on the ACORM paper and repository.
 
 ## **experiment instructions**
 
