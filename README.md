@@ -3,7 +3,7 @@
 
 Code based on the ACORM paper and repository.
 
-## **experiment instructions**
+## **Experiment instructions**
 
 ### **Installation instructions**
 Download the Linux version 4.10 of StarCraft II from the Blizzard's [repository](https://github.com/Blizzard/s2client-proto#downloads). By default, the game is expected to be in `~/StarCraftII/` directory. 
@@ -26,23 +26,18 @@ pip install flash-attn --no-build-isolation
 #conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 ### Run an experiment
 
-You can execute the following command to run ACORM based on QMIX with a map config, such as `MMM2`:
+You can execute the following command to run ACORM or R3DM based on QMIX with a map config, such as `MMM2`:
 
 ```python
-python ./ACORM_QMIX/main.py --algorithm ACORM --env_name MMM2 --cluster_num 3 --max_train_steps 3050000
-```
-or you can execute the following command to run ACORM base on MAPPO with a map config, such as `corridor`
-
-```python
-python ./ACORM_MAPPO/main.py --algorithm ACORM --env_name corridor --cluster_num 3 --max_train_steps 5050000
+python ./ACORM_QMIX/main.py --algorithm R3DM --env_name MMM2 --cluster_num 3 --max_train_steps 3050000
 ```
 
-All results will be stored in the `ACORM_QMIX or ACORM_MAPPO/results` folder. You can see the console output, config, and tensorboard logging in the `ACORM_QMIX or ACORM_MAPPO/results/tb_logs` folder.
+All results will be stored on wandb.
 
 You can plot the curve with `seaborn`:
 
 ```python
-python plot.py --algorithm 'ACORM_QMIX' or 'ACORM_MAPPO'
+python plot.py --algorithm 'R3DM' or 'ACORM_MAPPO'
 ```
 
 ## License
