@@ -37,7 +37,7 @@ All results will be stored on wandb.
 You can plot the curve with `seaborn`:
 
 ```python
-python plot.py --algorithm 'R3DM' or 'ACORM_MAPPO'
+python plot.py --algorithm 'R3DM' or 'ACORM'
 ```
 
 ## License
