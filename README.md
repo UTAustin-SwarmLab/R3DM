@@ -4,6 +4,10 @@
 
 This repository contains the official implementation for R3DM accepted at the International Conference on Machine Learning (ICML) 2025. It includes the source code for the ACORM and R3DM algorithms, as well as the baseline models used for comparison in the StarCraft Multi-Agent Challenge (SMAC and SMACv2) environments.
 
+[![Paper](https://img.shields.io/badge/paper-ICML%202025-blue.svg)](URL_TO_PAPER)
+[![Poster](https://img.shields.io/badge/poster-PDF-blue.svg)](URL_TO_POSTER)
+[![License](https://img.shields.io/badge/License-Apache_2.0-red.svg)](LICENSE)
+
 ## Abstract
 
 Multi-agent reinforcement learning (MARL) has achieved significant progress in large-scale traffic control, autonomous vehicles, and robotics. Drawing inspiration from biological systems where roles naturally emerge to enable coordination, role-based MARL methods have been proposed to enhance cooperation learning for complex tasks. However, existing methods exclusively derive roles from an agent's past experience during training, neglecting their influence on its future trajectories. This paper introduces a key insight: an agent's role should shape its future behavior to enable effective coordination. Hence, we propose Role Discovery and Diversity through Dynamics Models (R3DM), a novel role-based MARL framework that learns emergent roles by maximizing the mutual information between agents' roles, observed trajectories, and expected future behaviors. R3DM optimizes the proposed objective through contrastive learning on past trajectories to first derive intermediate roles that shape intrinsic rewards to promote diversity in future behaviors across different roles through a learned dynamics model. Benchmarking on SMAC and SMACv2 environments demonstrates that R3DM outperforms state-of-the-art MARL approaches, improving multi-agent coordination to increase win rates by up to 20%.
