@@ -6,7 +6,7 @@ This repository contains the official implementation for R3DM accepted at the In
 
 [![Paper](https://img.shields.io/badge/paper-ICML%202025-blue.svg)](https://openreview.net/forum?id=VSIjdKPGp8)
 [![Poster](https://img.shields.io/badge/poster-PDF-blue.svg)](https://icml.cc/media/PosterPDFs/ICML%202025/45066.png?t=1753041938.8506515)
-[![Tweet](https://img.shields.io/badge/poster-X-blue.svg)](https://x.com/hgoel1000/status/1944217308001710216)
+[![Tweet](https://img.shields.io/badge/Tweet-X-black.svg)](https://x.com/hgoel1000/status/1944217308001710216)
 [![License](https://img.shields.io/badge/License-Apache_2.0-red.svg)](LICENSE)
 
 ## Abstract
