@@ -11,6 +11,7 @@ Multi-agent reinforcement learning (MARL) has achieved significant progress in l
 ## Repository Structure
 This repository is organized to facilitate the reproduction of experiments and further research. The structure is designed to be logical and self-contained, with distinct directories for the main algorithms and each baseline comparison. A brief overview of the directory structure is provided below:   
 
+```
 .
 ├── ACORM_QMIX/         # Source code for the proposed ACORM and R3DM algorithms.
 ├── CIA/                # Source code for the CIA baseline algorithm.
@@ -21,7 +22,7 @@ This repository is organized to facilitate the reproduction of experiments and f
 ├── plot.py             # Python script for plotting experimental results from wandb.
 ├── requirements.txt    # A list of required Python packages for the project.
 └── README.md           # This documentation file.
-
+```
 
 The code is based on the ACORM paper and repository.
 
@@ -36,52 +37,51 @@ This section provides a comprehensive, step-by-step guide to setting up the nece
 4. Fit for cloning the repository.
 
 
-### Clone the Repository
+### Step 1: Clone the Repository
 First, clone this repository to your local machine using the following command:
 
 
 git clone https://github.com/your-username/ACORM.git
 cd ACORM
 
-Step 2: Install StarCraft II and SMAC Maps
-The experiments are conducted using the StarCraft II Learning Environment. Both the game and the specific map packs must be installed correctly.
+### Step 2: Install StarCraft II and SMAC Maps
 
-Download StarCraft II: Download the Linux version 4.10 of StarCraft II from the official Blizzard repository:(https://github.com/Blizzard/s2client-proto#downloads).
-
-Install StarCraft II: By default, the game must be unzipped and placed in your home directory at ~/StarCraftII/.
+1. The experiments are conducted using the StarCraft II Learning Environment. Both the game and the specific map packs must be installed correctly.
+2. Download StarCraft II: Download the Linux version 4.10 of StarCraft II from the official Blizzard repository:(https://github.com/Blizzard/s2client-proto#downloads).
+3. Install StarCraft II: By default, the game must be unzipped and placed in your home directory at ~/StarCraftII/.
 
 Important Note: If you install the game in a different location, you must set the SC2PATH environment variable to point to your installation directory. For example:
 
-Bash
-
+```
 export SC2PATH="/path/to/your/StarCraftII/"
+```
+
 This variable is required by some of the baseline scripts to locate the game executable.
 
 Install SMACv1 Maps: Download the original SMAC maps and place them in the Maps directory of your StarCraft II installation.
-
 Install SMACv2 Maps: For experiments on SMACv2 environments, additional maps are required.
 
 Install the smacv2 package:
 
-Bash
-
+```
 pip install git+https://github.com/oxwhirl/smacv2.git
+```
 Download the SMACv2 maps from the official release:(https://github.com/oxwhirl/smacv2/releases/download/maps/SMAC_Maps.zip).
 
 Unzip the downloaded file and place the contents into the SMAC_Maps directory within your StarCraft II installation (e.g., ~/StarCraftII/Maps/SMAC_Maps/).
 
-Step 3: Create and Activate the Conda Environment
+### Step 3: Create and Activate the Conda Environment
 A dedicated Conda environment is used to manage dependencies and ensure a consistent setup.   
 
-Bash
-
+```
 conda create -n acorm python=3.9.16 -y
 conda activate acorm
-Step 4: Install Python Dependencies
+```
+
+### Step 4: Install Python Dependencies
 Install the required Python packages using the provided requirements.txt file and additional pip commands. The commands should be run from the root of the cloned repository.
 
-Bash
-
+```
 # Install packages from the requirements file
 pip install -r requirements.txt
 
@@ -90,57 +90,64 @@ cd llm2vec
 pip install -e.
 cd..
 
+
 # Install flash-attention
 pip install flash-attn --no-build-isolation
-Step 5: Install PyTorch with CUDA Support
+
+```
+
+### Step 5: Install PyTorch with CUDA Support
 To ensure full compatibility with the required CUDA version and to prevent common driver-related issues, it is highly recommended to install PyTorch and its related libraries through Conda. This method correctly handles the CUDA toolkit dependencies within the environment.
-
-Bash
-
+```
 conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
-Step 6: Troubleshooting Common Issues
+```
+
+### Step 6: Troubleshooting Common Issues
 This section addresses known issues that may arise during installation.
 
 Moviepy Errors with wandb
 If you encounter errors related to moviepy during installation or when logging experiment videos to Weights & Biases (wandb), it is likely due to a version incompatibility. To resolve this, run the following commands to install specific, compatible versions of wandb[media] and moviepy:
 
-Bash
-
+```
 pip install --no-deps wandb[media]==0.18.7
 pip install --no-deps --upgrade "moviepy<2.0.0"
-Reproducing Experimental Results
+```
+
+## Reproducing Experimental Results
+
 This section provides the necessary commands to run the experiments for ACORM, R3DM, and all baseline algorithms.
 
 A Note on Environment Variables
 For the scripts to execute correctly, the PYTHONPATH must be set to include the relevant project directories. The provided commands handle this by prepending PYTHONPATH=$(pwd)/<SUBDIR> to the execution command. This approach replaces hardcoded, user-specific paths with dynamic ones, making the commands universally executable from the root of the cloned repository.   
 
-All experimental results, including performance metrics and training curves, are logged to Weights & Biases (wandb). Ensure you have an account and have logged in via the command line before starting any experiments:
+All experimental results, including performance metrics and training curves, are logged to Weights & Biases (wandb). Ensure you have an account and have logged in via the command line before starting any experiments.
 
-Bash
-
-wandb login
-Quick Start: Command Reference
+## Quick Start: Command Reference
 For experienced users, the following table provides a quick reference to the primary execution commands for a representative map in each algorithm and environment combination. Detailed explanations and further options are provided in the subsequent sections.
 
 Algorithm	Environment	Example Map / Config	Execution Command (from repository root)
+```
 ACORM / R3DM	SMACv1	MMM2	python./ACORM_QMIX/main.py --algorithm R3DM --env_name MMM2 --cluster_num 3 --max_train_steps 3050000
 CIA	SMACv1	3s5z_vs_3s6z	PYTHONPATH=$(pwd)/CIA python CIA/src/main.py --config=cia_grad_qmix_3s5z_vs_3s6z --env-config=sc2 with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
 CDS	SMACv1	3s5z_vs_3s6z	PYTHONPATH=$(pwd)/CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master/ SC2_PATH=$SC2PATH python CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master/src/main.py --config=qplex_qatten_sc2 --env-config=sc2_3s5z_vs_3s6z with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
 GoMARL	SMACv1	3s5z_vs_3s6z	PYTHONPATH=$(pwd)/GoMARL/ python GoMARL/src/main.py --config=group --env-config=sc2 with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
 EMC	SMACv2	protoss_5_vs_5	PYTHONPATH=$(pwd)/EMC/pymarl python EMC/src/main.py --config=sc2v2_protoss_5vs_5 --env-config=sc2v2_protoss_5_vs_5 with env_args.seed=3
+```
 
-Export to Sheets
+
 Running ACORM and R3DM (Main Algorithms)
 The main algorithms, ACORM and R3DM, are executed using the main.py script located in the ACORM_QMIX directory.
 
 Example Command:
 
-Bash
-
+```
 python./ACORM_QMIX/main.py --algorithm R3DM --env_name MMM2 --cluster_num 3 --max_train_steps 3050000
+```
+
 Key Arguments:
 Providing explanations for key arguments empowers other researchers to not only replicate results but also to adapt the code for their own research questions, such as testing the algorithm on new maps or with different hyperparameters. This practice elevates the repository from a static artifact to a dynamic tool for the community.
 
+```
 --algorithm: Specifies the algorithm to run. Options are ACORM or R3DM.
 
 --env_name: The name of the SMAC map to use for the experiment (e.g., MMM2, 8m, 3s5z).
@@ -148,112 +155,15 @@ Providing explanations for key arguments empowers other researchers to not only 
 --cluster_num: A key hyperparameter for the algorithm, defining the number of clusters.
 
 --max_train_steps: The total number of training timesteps for the experiment.
+```
 
 Running Baseline Algorithms
 The following subsections provide the commands for running each of the baseline algorithms. Note the distinct command structures and configurations for SMACv1 and SMACv2 environments.
 
-## **Experiment instructions**
-
-### **Installation instructions**
-Download the Linux version 4.10 of StarCraft II from the Blizzard's [repository](https://github.com/Blizzard/s2client-proto#downloads). By default, the game is expected to be in `~/StarCraftII/` directory. 
-
-Make sure you install the SMAC Maps.
-
-See `requirments.txt` file for more information about how to install the dependencies.
-```python
-conda create -n acorm python=3.9.16 -y
-conda activate acorm
-pip install -r requirements.txt
-
-# pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 kmeans-pytorch
-cd llm2vec
-pip install -e .
-pip install flash-attn --no-build-isolation
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
-conda install pytorch torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
-```
-
-### Run an experiment
-
-You can execute the following command to run ACORM or R3DM based on QMIX with a map config, such as `MMM2`:
-
-```python
-python ./ACORM_QMIX/main.py --algorithm R3DM --env_name MMM2 --cluster_num 3 --max_train_steps 3050000
-```
-
-All results will be stored on wandb.
-
-You can plot the curve with `seaborn`:
-
-```python
-python plot.py --algorithm 'R3DM' or 'ACORM'
-```
-
-## License
 
 Code licensed under the Apache License v2.0.
 
-## Run the baselines
-We provide the example code
-### CIA
-Run experiments within CIA folder using the following:
-```
-PYTHONPATH=/home/hg22723/projects/ACORMLLM/CIA/ python src/main.py --config=cia_grad_qmix_3s5z_vs_3s6z --env-config=sc2 with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
-```
-
-For SMACV2 environments that start with protoss, terran or zerg as sample command is as follows (dont specify map_name)
-```
-PYTHONPATH=/home/hg22723/projects/ACORMLLM/CIA/ python src/main.py --config=cia_grad_qmix_3s5z_vs_3s6z --env-config=sc2_protoss_5_vs_5 with env_args.seed=3
-```
-
-### CDS
-1. 
-Run experiments within the CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master folder with the following command:
-2. Copy the StarcraftII installation done after following earlier steps and place it in pymarl-master/3rdparty 
-3.  Following is the sample command to then run the experiments for CDS
-```
-PYTHONPATH=/home/hg22723/projects/ACORMLLM/CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master/ SC2_PATH=/home/hg22723/ python src/main.py --config=qplex_qatten_sc2 --env-config=sc2_3s5z_vs_3s6z with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
-```
-
-For SMACV2 environments that start with protoss, terran or zerg as sample command is as follows (dont specify map_name)
-```
-PYTHONPATH=/home/hg22723/projects/ACORMLLM/CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master/ SC2_PATH=/home/hg22723/ python src/main.py --config=qplex_qatten_sc2 --env-config=sc2_protoss_5_vs_5 with env_args.seed=3
-```
-
-### GoMARL
-Run experiments within GoMARL folder using the following from SMACV1 environments
-```
-PYTHONPATH=/home/hg22723/projects/ACORMLLM/GoMARL/ python src/main.py --config=group --env-config=sc2 with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
-```
-
-For SMACV2 environments that start with protoss, terran or zerg as sample command is as follows (dont specify map_name)
-```
-PYTHONPATH=/home/hg22723/projects/ACORMLLM/GoMARL/ python src/main.py --config=group --env-config=sc2v2_protoss_5_vs_5 with env_args.seed=3
-```
-
-### EMC
-```
-PYTHONPATH=/home/hg22723/projects/ACORMLLM/EMC/pymarl python src/main.py --config=sc2v2_protoss_5vs_5 --env-config=sc2v2_protoss_5_vs_5 with env_args.seed=3
-```
-
-### Setting up SMACV2
-
-Install SMACV2 from github
-'''
-pip install git+https://github.com/oxwhirl/smacv2.git
-'''
-
-Download the maps from [here](https://github.com/oxwhirl/smacv2/releases/download/maps/SMAC_Maps.zip) and place it inside SMAC_Maps within your StarcraftII installation.
-
-After downloading SMACV2 maps, update scripts accordingly for SMACv2. For example, for GoMARL:
-```
-PYTHONPATH=/home/hg22723/projects/ACORMLLM/GoMARL/ python src/main.py --config=group --env-config=sc2v2_protoss_5_vs_5 with env_args.map_name=10gen_protoss env_args.seed=3
-```
 
 
 
-### If some moviepy errors come out please do this
-'''
-pip install --no-deps wandb[media]==0.18.7
-pip install --no-deps --upgrade "moviepy<2.0.0"
-'''
+
