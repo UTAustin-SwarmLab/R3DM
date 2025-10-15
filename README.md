@@ -89,11 +89,6 @@ Install the required Python packages using the provided requirements.txt file an
 # Install packages from the requirements file
 pip install -r requirements.txt
 
-# Install the llm2vec module in editable mode
-cd llm2vec
-pip install -e.
-cd..
-
 
 # Install flash-attention
 pip install flash-attn --no-build-isolation
@@ -130,13 +125,14 @@ All experimental results, including performance metrics and training curves, are
 For experienced users, the following table provides a quick reference to the primary execution commands for a representative map in each algorithm and environment combination. Detailed explanations and further options are provided in the subsequent sections.
 
 Algorithm	Environment	Example Map / Config	Execution Command (from repository root)
-```
-ACORM / R3DM	SMACv1	MMM2	python./ACORM_QMIX/main.py --algorithm R3DM --env_name MMM2 --cluster_num 3 --max_train_steps 3050000
-CIA	SMACv1	3s5z_vs_3s6z	PYTHONPATH=$(pwd)/CIA python CIA/src/main.py --config=cia_grad_qmix_3s5z_vs_3s6z --env-config=sc2 with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
-CDS	SMACv1	3s5z_vs_3s6z	PYTHONPATH=$(pwd)/CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master/ SC2_PATH=$SC2PATH python CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master/src/main.py --config=qplex_qatten_sc2 --env-config=sc2_3s5z_vs_3s6z with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
-GoMARL	SMACv1	3s5z_vs_3s6z	PYTHONPATH=$(pwd)/GoMARL/ python GoMARL/src/main.py --config=group --env-config=sc2 with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
-EMC	SMACv2	protoss_5_vs_5	PYTHONPATH=$(pwd)/EMC/pymarl python EMC/src/main.py --config=sc2v2_protoss_5vs_5 --env-config=sc2v2_protoss_5_vs_5 with env_args.seed=3
-```
+
+| Algorithm      | Environment | Example Map / Config | Execution Command (from repository root)                                                                                                                              |
+| :------------- | :---------- | :------------------- | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **ACORM/R3DM** | SMACv1      | `MMM2`               | `python ./ACORM_QMIX/main.py --algorithm R3DM --env_name MMM2 --cluster_num 3 --max_train_steps 3050000`                                                              |
+| **CIA** | SMACv1      | `3s5z_vs_3s6z`       | `PYTHONPATH=$(pwd)/CIA python CIA/src/main.py --config=cia_grad_qmix_3s5z_vs_3s6z --env-config=sc2 with env_args.map_name=3s5z_vs_3s6z env_args.seed=3`                  |
+| **CDS** | SMACv1      | `3s5z_vs_3s6z`       | `PYTHONPATH=$(pwd)/CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master/ SC2_PATH=$SC2PATH python CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master/src/main.py --config=qplex_qatten_sc2 --env-config=sc2_3s5z_vs_3s6z with env_args.map_name=3s5z_vs_3s6z env_args.seed=3` |
+| **GoMARL** | SMACv1      | `3s5z_vs_3s6z`       | `PYTHONPATH=$(pwd)/GoMARL/ python GoMARL/src/main.py --config=group --env-config=sc2 with env_args.map_name=3s5z_vs_3s6z env_args.seed=3`                                  |
+| **EMC** | SMACv2      | `protoss_5_vs_5`     | `PYTHONPATH=$(pwd)/EMC/pymarl python EMC/src/main.py --config=sc2v2_protoss_5vs_5 --env-config=sc2v2_protoss_5_vs_5 with env_args.seed=3`                                |
 
 
 Running ACORM and R3DM (Main Algorithms)
@@ -163,13 +159,15 @@ Providing explanations for key arguments empowers other researchers to not only 
 
 We also provide the scripts for launching experiments all seeds here.
 ```
-sh scripts
+sh ACORM_QMIX/r3dm.sh
+sh ACORM_QMIX/acorm.sh
 ```
 
-Running Baseline Algorithms
+## Running Baseline Algorithms
 The following subsections provide the commands for running each of the baseline algorithms. Note the distinct command structures and configurations for SMACv1 and SMACv2 environments.
 
 
+## License
 Code licensed under the Apache License v2.0.
 
 
