@@ -145,7 +145,7 @@ The main algorithms, ACORM and R3DM, are executed using the main.py script locat
 Example Command:
 
 ```
-python./ACORM_QMIX/main.py --algorithm R3DM --env_name MMM2 --cluster_num 3 --max_train_steps 3050000
+python3 ./ACORM_QMIX/main.py --algorithm R3DM --env_name MMM2 --cluster_num 3 --max_train_steps 3050000
 ```
 
 Key Arguments:
@@ -159,6 +159,11 @@ Providing explanations for key arguments empowers other researchers to not only 
 --cluster_num: A key hyperparameter for the algorithm, defining the number of clusters.
 
 --max_train_steps: The total number of training timesteps for the experiment.
+```
+
+We also provide the scripts for launching experiments all seeds here.
+```
+sh scripts
 ```
 
 Running Baseline Algorithms
