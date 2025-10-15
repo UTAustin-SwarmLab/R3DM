@@ -4,8 +4,8 @@
 
 This repository contains the official implementation for R3DM accepted at the International Conference on Machine Learning (ICML) 2025. It includes the source code for the ACORM and R3DM algorithms, as well as the baseline models used for comparison in the StarCraft Multi-Agent Challenge (SMAC and SMACv2) environments.
 
-[![Paper](https://img.shields.io/badge/paper-ICML%202025-blue.svg)](URL_TO_PAPER)
-[![Poster](https://img.shields.io/badge/poster-PDF-blue.svg)](URL_TO_POSTER)
+[![Paper](https://img.shields.io/badge/paper-ICML%202025-blue.svg)](https://openreview.net/forum?id=VSIjdKPGp8)
+[![Poster](https://img.shields.io/badge/poster-PDF-blue.svg)](https://icml.cc/media/PosterPDFs/ICML%202025/45066.png?t=1753041938.8506515)
 [![License](https://img.shields.io/badge/License-Apache_2.0-red.svg)](LICENSE)
 
 ## Abstract
@@ -166,11 +166,61 @@ sh ACORM_QMIX/acorm.sh
 ## Running Baseline Algorithms
 The following subsections provide the commands for running each of the baseline algorithms. Note the distinct command structures and configurations for SMACv1 and SMACv2 environments.
 
+### CIA
+Run experiments within CIA folder using the following:
+```
+PYTHONPATH=/home/hg22723/projects/ACORMLLM/CIA/ python src/main.py --config=cia_grad_qmix_3s5z_vs_3s6z --env-config=sc2 with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
+```
+
+For SMACV2 environments that start with protoss, terran or zerg as sample command is as follows (dont specify map_name)
+```
+PYTHONPATH=/home/hg22723/projects/ACORMLLM/CIA/ python src/main.py --config=cia_grad_qmix_3s5z_vs_3s6z --env-config=sc2_protoss_5_vs_5 with env_args.seed=3
+```
+
+### CDS
+1. 
+Run experiments within the CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master folder with the following command:
+2. Copy the StarcraftII installation done after following earlier steps and place it in pymarl-master/3rdparty 
+3.  Following is the sample command to then run the experiments for CDS
+```
+PYTHONPATH=/home/hg22723/projects/ACORMLLM/CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master/ SC2_PATH=/home/hg22723/ python src/main.py --config=qplex_qatten_sc2 --env-config=sc2_3s5z_vs_3s6z with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
+```
+
+For SMACV2 environments that start with protoss, terran or zerg as sample command is as follows (dont specify map_name)
+```
+PYTHONPATH=/home/hg22723/projects/ACORMLLM/CDS/CDS_SMAC/QPLEX-master-SC2/pymarl-master/ SC2_PATH=/home/hg22723/ python src/main.py --config=qplex_qatten_sc2 --env-config=sc2_protoss_5_vs_5 with env_args.seed=3
+```
+
+### GoMARL
+Run experiments within GoMARL folder using the following from SMACV1 environments
+```
+PYTHONPATH=/home/hg22723/projects/ACORMLLM/GoMARL/ python src/main.py --config=group --env-config=sc2 with env_args.map_name=3s5z_vs_3s6z env_args.seed=3
+```
+
+For SMACV2 environments that start with protoss, terran or zerg as sample command is as follows (dont specify map_name)
+```
+PYTHONPATH=/home/hg22723/projects/ACORMLLM/GoMARL/ python src/main.py --config=group --env-config=sc2v2_protoss_5_vs_5 with env_args.seed=3
+```
+
+### EMC
+```
+PYTHONPATH=/home/hg22723/projects/ACORMLLM/EMC/pymarl python src/main.py --config=sc2v2_protoss_5vs_5 --env-config=sc2v2_protoss_5_vs_5 with env_args.seed=3
+```
+
 
 ## License
 Code licensed under the Apache License v2.0.
 
+## Citation
 
+If you find our work useful, please use this citation.
 
+```
+@inproceedings{goelr3dm,
+  title={R3DM: Enabling Role Discovery and Diversity Through Dynamics Models in Multi-agent Reinforcement Learning},
+  author={Goel, Harsh and Omama, Mohammad and Chalaki, Behdad and Tadiparthi, Vaishnav and Pari, Ehsan Moradi and Chinchali, Sandeep P},
+  booktitle={Forty-second International Conference on Machine Learning}
+}
+```
 
 
