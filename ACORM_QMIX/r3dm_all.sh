@@ -6,7 +6,7 @@ EPS_DECAY=80000
 lr_decay=0.98
 min_eps=0.02
 lr=6e-4
-tag='nocl'
+tag=''
 OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --algorithm 'R3DM' \
  --env_name ${ENV}\
@@ -20,7 +20,7 @@ OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --use_lr_decay True     \
  --lr_decay_steps 500    \
  --lr_decay_rate ${lr_decay}    \
- --train_recl_freq 00 \
+ --train_recl_freq 100 \
  --use_ln True \
  --role_tau 0.005  \
  --tau 0.005\
@@ -43,7 +43,7 @@ OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --batch_size ${batch_size} \
  --tag ${tag} \
 &                   
-OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=1 python main.py \
  --algorithm 'R3DM' \
  --env_name ${ENV}\
  --device 'cuda:0'\
@@ -56,7 +56,7 @@ OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --use_lr_decay True     \
  --lr_decay_steps 500    \
  --lr_decay_rate ${lr_decay}    \
- --train_recl_freq 00 \
+ --train_recl_freq 100 \
  --use_ln True \
  --role_tau 0.005  \
  --tau 0.005\
@@ -79,7 +79,7 @@ OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --batch_size ${batch_size} \
  --tag ${tag} \
 &                  
-OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=2 python main.py \
  --algorithm 'R3DM' \
  --env_name ${ENV}\
  --device 'cuda:0'\
@@ -92,7 +92,7 @@ OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --use_lr_decay ${lr_decay}     \
  --lr_decay_steps 500    \
  --lr_decay_rate 0.98    \
- --train_recl_freq 00 \
+ --train_recl_freq 100 \
  --use_ln True \
  --role_tau 0.005  \
  --tau 0.005\
@@ -115,7 +115,7 @@ OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --batch_size ${batch_size} \
  --tag ${tag} \
 &                 
-OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=3 python main.py \
  --algorithm 'R3DM' \
  --env_name ${ENV}\
  --device 'cuda:0'\
@@ -128,7 +128,7 @@ OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --use_lr_decay True     \
  --lr_decay_steps 500    \
  --lr_decay_rate ${lr_decay}    \
- --train_recl_freq 00 \
+ --train_recl_freq 100 \
  --use_ln True \
  --role_tau 0.005  \
  --tau 0.005\
@@ -151,7 +151,7 @@ OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --batch_size ${batch_size} \
  --tag ${tag} \
 & 
-OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=4 python main.py \
  --algorithm 'R3DM' \
  --env_name ${ENV}\
  --device 'cuda:0'\
@@ -164,7 +164,7 @@ OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --use_lr_decay True     \
  --lr_decay_steps 500    \
  --lr_decay_rate ${lr_decay}    \
- --train_recl_freq 00 \
+ --train_recl_freq 100 \
  --use_ln True \
  --role_tau 0.005  \
  --tau 0.005\
@@ -187,7 +187,7 @@ OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --batch_size ${batch_size} \
  --tag ${tag} \
 &                 
-OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
+OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=5 python main.py \
  --algorithm 'R3DM' \
  --env_name ${ENV}\
  --device 'cuda:0'\
@@ -200,7 +200,7 @@ OMP_NUM_THREADS=5 CUDA_VISIBLE_DEVICES=0 python main.py \
  --use_lr_decay True     \
  --lr_decay_steps 500    \
  --lr_decay_rate ${lr_decay}    \
- --train_recl_freq 00 \
+ --train_recl_freq 100 \
  --use_ln True \
  --role_tau 0.005  \
  --tau 0.005\
